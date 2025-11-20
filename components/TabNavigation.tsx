@@ -27,8 +27,8 @@ export function TabNavigation({ activeTab, onTabChange }: TabNavigationProps) {
                                 key={tab.id}
                                 onClick={() => onTabChange(tab.id)}
                                 className={`flex flex-col items-center gap-1 px-6 py-2 rounded-xl transition-all duration-200 ${isActive
-                                        ? 'bg-purple-600 text-white scale-105'
-                                        : 'text-purple-200 hover:text-white hover:bg-white/5'
+                                        ? 'bg-blue-600 text-white scale-105'
+                                        : 'text-blue-100 hover:text-white hover:bg-white/5'
                                     }`}
                             >
                                 <Icon className={`h-6 w-6 ${isActive ? 'animate-pulse' : ''}`} />

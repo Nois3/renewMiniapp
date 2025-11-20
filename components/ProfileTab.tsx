@@ -10,8 +10,8 @@ export function ProfileTab() {
         return (
             <div className="pb-24">
                 <div className="rounded-2xl bg-white/5 p-8 border border-white/10 text-center">
-                    <User className="h-16 w-16 text-purple-300 mx-auto mb-4" />
-                    <p className="text-purple-200">No user context available</p>
+                    <User className="h-16 w-16 text-blue-200 mx-auto mb-4" />
+                    <p className="text-blue-100">No user context available</p>
                 </div>
             </div>
         );
@@ -21,7 +21,7 @@ export function ProfileTab() {
         <div className="space-y-6 pb-24">
             {/* Profile Header */}
             <div className="text-center space-y-4">
-                <div className="inline-flex items-center justify-center w-24 h-24 rounded-full bg-gradient-to-br from-purple-500 to-pink-500 text-white text-3xl font-bold">
+                <div className="inline-flex items-center justify-center w-24 h-24 rounded-full bg-gradient-to-br from-blue-600 to-cyan-500 text-white text-3xl font-bold">
                     {context.user?.displayName?.[0]?.toUpperCase() || context.user?.username?.[0]?.toUpperCase() || '?'}
                 </div>
                 <div>
@@ -29,7 +29,7 @@ export function ProfileTab() {
                         {context.user?.displayName || 'Anonymous'}
                     </h1>
                     {context.user?.username && (
-                        <p className="text-lg text-purple-300">@{context.user.username}</p>
+                        <p className="text-lg text-blue-200">@{context.user.username}</p>
                     )}
                 </div>
             </div>
@@ -41,10 +41,10 @@ export function ProfileTab() {
                 {/* FID */}
                 <div className="rounded-2xl bg-white/5 p-5 border border-white/10">
                     <div className="flex items-center gap-3 mb-2">
-                        <div className="p-2 rounded-lg bg-purple-500/20">
-                            <Hash className="h-5 w-5 text-purple-300" />
+                        <div className="p-2 rounded-lg bg-blue-500/20">
+                            <Hash className="h-5 w-5 text-blue-200" />
                         </div>
-                        <span className="text-sm font-medium text-purple-300">Farcaster ID (FID)</span>
+                        <span className="text-sm font-medium text-blue-200">Farcaster ID (FID)</span>
                     </div>
                     <p className="text-lg font-mono text-white ml-11">{context.user?.fid || 'N/A'}</p>
                 </div>
@@ -53,10 +53,10 @@ export function ProfileTab() {
                 {context.user?.username && (
                     <div className="rounded-2xl bg-white/5 p-5 border border-white/10">
                         <div className="flex items-center gap-3 mb-2">
-                            <div className="p-2 rounded-lg bg-pink-500/20">
-                                <AtSign className="h-5 w-5 text-pink-300" />
+                            <div className="p-2 rounded-lg bg-cyan-500/20">
+                                <AtSign className="h-5 w-5 text-cyan-300" />
                             </div>
-                            <span className="text-sm font-medium text-purple-300">Username</span>
+                            <span className="text-sm font-medium text-blue-200">Username</span>
                         </div>
                         <p className="text-lg text-white ml-11">@{context.user.username}</p>
                     </div>
@@ -66,10 +66,10 @@ export function ProfileTab() {
                 {context.user?.displayName && (
                     <div className="rounded-2xl bg-white/5 p-5 border border-white/10">
                         <div className="flex items-center gap-3 mb-2">
-                            <div className="p-2 rounded-lg bg-indigo-500/20">
-                                <Type className="h-5 w-5 text-indigo-300" />
+                            <div className="p-2 rounded-lg bg-blue-400/20">
+                                <Type className="h-5 w-5 text-blue-200" />
                             </div>
-                            <span className="text-sm font-medium text-purple-300">Display Name</span>
+                            <span className="text-sm font-medium text-blue-200">Display Name</span>
                         </div>
                         <p className="text-lg text-white ml-11">{context.user.displayName}</p>
                     </div>
@@ -79,10 +79,10 @@ export function ProfileTab() {
                 {context.location && (
                     <div className="rounded-2xl bg-white/5 p-5 border border-white/10">
                         <div className="flex items-center gap-3 mb-2">
-                            <div className="p-2 rounded-lg bg-green-500/20">
-                                <MapPin className="h-5 w-5 text-green-300" />
+                            <div className="p-2 rounded-lg bg-cyan-500/20">
+                                <MapPin className="h-5 w-5 text-cyan-300" />
                             </div>
-                            <span className="text-sm font-medium text-purple-300">Location Type</span>
+                            <span className="text-sm font-medium text-blue-200">Location Type</span>
                         </div>
                         <p className="text-lg text-white ml-11">{context.location.type || 'N/A'}</p>
                     </div>
@@ -90,11 +90,12 @@ export function ProfileTab() {
             </div>
 
             {/* Additional Info */}
-            <div className="rounded-2xl bg-gradient-to-r from-purple-500/10 to-pink-500/10 p-6 border border-purple-500/20">
-                <p className="text-sm text-purple-200 text-center">
+            <div className="rounded-2xl bg-gradient-to-r from-blue-500/10 to-cyan-500/10 p-6 border border-blue-500/20">
+                <p className="text-sm text-blue-100 text-center">
                     Your Farcaster profile information is securely accessed through the Frame SDK
                 </p>
             </div>
         </div>
     );
 }
+

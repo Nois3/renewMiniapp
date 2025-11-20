@@ -110,7 +110,7 @@ export function MintTab() {
                         <CheckCircle className="h-10 w-10 text-green-400" />
                     </div>
                     <h2 className="text-3xl font-bold text-white">NFT Created!</h2>
-                    <p className="text-purple-200">Your NFT metadata has been uploaded to IPFS</p>
+                    <p className="text-blue-100">Your NFT metadata has been uploaded to IPFS</p>
                 </div>
 
                 {/* Preview */}
@@ -136,12 +136,12 @@ export function MintTab() {
                         />
                         <button
                             onClick={copyToClipboard}
-                            className="px-4 py-3 rounded-xl bg-purple-600 hover:bg-purple-700 text-white transition-colors"
+                            className="px-4 py-3 rounded-xl bg-blue-600 hover:bg-blue-700 text-white transition-colors"
                         >
                             <Copy className="h-5 w-5" />
                         </button>
                     </div>
-                    <p className="text-sm text-purple-300">
+                    <p className="text-sm text-blue-200">
                         Use this URI when minting your NFT on the blockchain
                     </p>
                 </div>
@@ -149,11 +149,11 @@ export function MintTab() {
                 {/* NFT Details */}
                 <div className="rounded-2xl bg-white/5 p-6 border border-white/10 space-y-3">
                     <div>
-                        <span className="text-sm text-purple-300">Name</span>
+                        <span className="text-sm text-blue-200">Name</span>
                         <p className="text-lg text-white font-semibold">{nftName}</p>
                     </div>
                     <div>
-                        <span className="text-sm text-purple-300">Description</span>
+                        <span className="text-sm text-blue-200">Description</span>
                         <p className="text-white">{nftDescription}</p>
                     </div>
                 </div>
@@ -172,13 +172,13 @@ export function MintTab() {
         <div className="space-y-6 pb-24">
             <div className="text-center space-y-2">
                 <h2 className="text-3xl font-bold text-white">Create Your NFT</h2>
-                <p className="text-purple-200">Upload an image and add metadata</p>
+                <p className="text-blue-100">Upload an image and add metadata</p>
             </div>
 
             {/* Image Upload */}
             <div className="space-y-4">
                 <label className="block">
-                    <span className="text-sm font-medium text-purple-300 mb-2 block">Image</span>
+                    <span className="text-sm font-medium text-blue-200 mb-2 block">Image</span>
                     <input
                         ref={fileInputRef}
                         type="file"
@@ -188,7 +188,7 @@ export function MintTab() {
                     />
                     <div
                         onClick={() => fileInputRef.current?.click()}
-                        className="relative rounded-2xl bg-white/5 border-2 border-dashed border-white/20 hover:border-purple-500 transition-colors cursor-pointer overflow-hidden"
+                        className="relative rounded-2xl bg-white/5 border-2 border-dashed border-white/20 hover:border-blue-500 transition-colors cursor-pointer overflow-hidden"
                     >
                         {previewUrl ? (
                             <div className="relative">
@@ -203,9 +203,9 @@ export function MintTab() {
                             </div>
                         ) : (
                             <div className="p-12 text-center">
-                                <Upload className="h-12 w-12 text-purple-300 mx-auto mb-4" />
+                                <Upload className="h-12 w-12 text-blue-200 mx-auto mb-4" />
                                 <p className="text-white font-medium mb-2">Click to upload image</p>
-                                <p className="text-sm text-purple-300">PNG, JPG, or GIF (max 10MB)</p>
+                                <p className="text-sm text-blue-200">PNG, JPG, or GIF (max 10MB)</p>
                             </div>
                         )}
                     </div>
@@ -215,13 +215,13 @@ export function MintTab() {
             {/* NFT Name */}
             <div className="space-y-2">
                 <label className="block">
-                    <span className="text-sm font-medium text-purple-300 mb-2 block">NFT Name</span>
+                    <span className="text-sm font-medium text-blue-200 mb-2 block">NFT Name</span>
                     <input
                         type="text"
                         value={nftName}
                         onChange={(e) => setNftName(e.target.value)}
                         placeholder="My Awesome NFT"
-                        className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white placeholder-purple-400/50 focus:outline-none focus:border-purple-500 transition-colors"
+                        className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white placeholder-blue-300/50 focus:outline-none focus:border-blue-500 transition-colors"
                     />
                 </label>
             </div>
@@ -229,13 +229,13 @@ export function MintTab() {
             {/* NFT Description */}
             <div className="space-y-2">
                 <label className="block">
-                    <span className="text-sm font-medium text-purple-300 mb-2 block">Description</span>
+                    <span className="text-sm font-medium text-blue-200 mb-2 block">Description</span>
                     <textarea
                         value={nftDescription}
                         onChange={(e) => setNftDescription(e.target.value)}
                         placeholder="Describe your NFT..."
                         rows={4}
-                        className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white placeholder-purple-400/50 focus:outline-none focus:border-purple-500 transition-colors resize-none"
+                        className="w-full px-4 py-3 rounded-xl bg-white/5 border border-white/10 text-white placeholder-blue-300/50 focus:outline-none focus:border-blue-500 transition-colors resize-none"
                     />
                 </label>
             </div>
@@ -252,7 +252,7 @@ export function MintTab() {
             <button
                 onClick={handleUpload}
                 disabled={isUploading || !selectedImage || !nftName || !nftDescription}
-                className="w-full px-6 py-4 rounded-xl bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-semibold transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+                className="w-full px-6 py-4 rounded-xl bg-gradient-to-r from-blue-600 to-cyan-600 hover:from-blue-700 hover:to-cyan-700 text-white font-semibold transition-all disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
             >
                 {isUploading ? (
                     <>
@@ -268,11 +268,12 @@ export function MintTab() {
             </button>
 
             {/* Info */}
-            <div className="rounded-xl bg-purple-500/10 border border-purple-500/20 p-4">
-                <p className="text-sm text-purple-200 text-center">
+            <div className="rounded-xl bg-blue-500/10 border border-blue-500/20 p-4">
+                <p className="text-sm text-blue-100 text-center">
                     Your image and metadata will be uploaded to IPFS for permanent storage
                 </p>
             </div>
         </div>
     );
 }
+

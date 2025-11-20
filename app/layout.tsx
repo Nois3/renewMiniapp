@@ -14,8 +14,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Farcaster Mini App Starter",
-  description: "A starter template for building Farcaster Mini Apps with Next.js",
+  title: "Base NFT Minter",
+  description: "Create NFTs on Base with IPFS storage",
 };
 
 export default function RootLayout({
